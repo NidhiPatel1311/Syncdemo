@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_animation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".AnimDemoActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/album2" >
+    </ImageView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/buttonZoom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Zoom"
+
+
+            android:layout_marginRight="4dp"
+            android:padding="16dp"
+            android:onClick="zoom"
+            />
+
+        <Button
+            android:id="@+id/crossfade"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ZOOM OUT"
+
+
+            android:layout_marginRight="4dp"
+            android:padding="16dp"
+            android:onClick="crossfade"/>
+
+    </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <Button
+                android:id="@+id/buttonSlideUP"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="SLIDE UP"
+
+
+                android:onClick="slideUp"
+                />
+
+            <Button
+                android:id="@+id/buttonSlideDown"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="SLIDE DOWN"
+
+
+                android:onClick="slideDown" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/buttonFade"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="FADE IN"
+
+
+                android:layout_marginRight="4dp"
+                android:padding="16dp"
+                android:onClick="fade"/>
+
+            <Button
+                android:id="@+id/buttonFadeout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="FADE OUT"
+
+                android:onClick="fadeout" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/buttonBlink"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Blink"
+
+
+                android:layout_marginRight="4dp"
+                android:padding="16dp"
+                android:onClick="blink"
+                />
+
+            <Button
+                android:id="@+id/buttonMove"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="move"
+
+
+                android:onClick="move"/>
+
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/rotate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ROTATE"
+
+
+                android:layout_marginRight="4dp"
+                android:padding="16dp"
+                android:onClick="rotate"/>
+
+            <Button
+                android:id="@+id/together"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TOGETHER"
+
+
+                android:onClick="together" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/bounce"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="BOUNCE"
+
+
+                android:layout_marginRight="4dp"
+                android:padding="16dp"
+                android:onClick="bounce"/>
+
+            <Button
+                android:id="@+id/sequential"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="SEQUENTIAL"
+
+
+                android:onClick="sequential" />
+        </TableRow>
+    </TableLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

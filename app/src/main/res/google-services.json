@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1036840188785",
+    "firebase_url": "https://androiddemo-bdfbd.firebaseio.com",
+    "project_id": "androiddemo-bdfbd",
+    "storage_bucket": "androiddemo-bdfbd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1036840188785:android:bd1d3759e90affaa",
+        "android_client_info": {
+          "package_name": "com.example.tech_5.syncdemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1036840188785-tfqp6ofjb3egh9qocacphcmg9gif7ja0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsqUixT5P5WcKYBCnOIF6HwhqlfMnJPu8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity"
+
+    >
+    <!--<item-->
+        <!--android:id="@+id/name" android:icon="@android:drawable/ic_dialog_info" app:showAsAction="never" android:title="@string/name">-->
+    <!--</item>-->
+    <!--<item-->
+        <!--android:id="@+id/email"  app:showAsAction="never" android:title="@string/hint_email">-->
+    <!--</item>-->
+    <item
+        android:id="@+id/btnLogout"
+        android:background="@color/btn_logut_bg"
+        android:textColor="@color/white"
+        android:title="@string/btn_logout"
+        app:showAsAction="never">
+
+    </item>
+
+</menu>

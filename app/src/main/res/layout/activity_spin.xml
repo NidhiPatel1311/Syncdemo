@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:fitsSystemWindows="true"
+    android:background="#000000"
+    android:orientation="vertical">
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/SpinKit"
+        style="@style/SpinKitView.Large.Wave"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="62dp"
+        app:SpinKit_Color="@color/colorPrimary" />
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/SpinKit2"
+        style="@style/SpinKitView.Large.Wave"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/SpinKit"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="87dp"
+        app:SpinKit_Color="@color/colorPrimary" />
+
+    <Button
+        android:id="@+id/Btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="INVISIBLE" />
+</RelativeLayout>

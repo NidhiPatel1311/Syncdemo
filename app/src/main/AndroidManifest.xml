@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.tech_5.syncdemo">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:name=".App.AppController"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode" />
+
+        <activity
+            android:name=".IntroSliderActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- <activity -->
+        <!-- android:name=".SplashScreenActivity" -->
+        <!-- android:label="@string/app_name" -->
+        <!-- android:theme="@style/Theme.AppCompat.Light.NoActionBar"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".MainDetailActivity"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+            />
+        </activity>
+
+        <!--<receiver android:name=".NetworkStateChecker">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+
+        <activity android:name=".RegisterActivity" />
+
+        <service android:name=".Service.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".Service.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".CustomListActivity" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".Main2Activity"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CardActivity"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".TabActivity"
+            android:parentActivityName=".Main2Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Main2Activity" />
+            />
+        </activity>
+        <activity android:name=".ListviewActivity" />
+        <activity
+            android:name=".WebviewActivity"
+            android:parentActivityName=".Main2Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Main2Activity" />
+            >
+        </activity>
+        <activity android:name=".BrowserActivity" />
+        <activity android:name=".SwipelistActivity" />
+        <activity android:name=".AddmodActivity" />
+        <activity android:name=".SecondActivity" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".CameraActivity"
+            android:label="@string/title_activity_camera"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".DropdownActivity" />
+        <activity android:name=".AndroidGridLayoutActivity" />
+        <activity android:name=".FullImageActivity" />
+        <activity android:name=".BottomnavActivity" />
+        <activity
+            android:name=".SearchFilterActivity"
+            android:label="@string/title_activity_search_filter"
+            android:parentActivityName=".Main2Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AndroidQRCodeScanner" />
+        <activity android:name=".QRcodeGenerateActivity" />
+
+        <receiver android:name=".receiver.SmsReceiver">
+            <intent-filter android:priority="99999">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Intent service -->
+        <service
+            android:name=".Service.HttpService"
+            android:exported="false" />
+
+        <activity android:name=".SmsActivity" />
+        <!-- <activity android:name=".FireOtpActivity" /> -->
+        <!-- <activity android:name=".SignedIn" /> -->
+        <activity android:name=".SmsdetailActivity" />
+        <activity
+            android:name=".Util.AlertDetails"
+            android:label="@string/title_activity_alert_details"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ReplynotifActivity" />
+        <activity
+            android:name=".Animationdemo"
+            android:parentActivityName=".Main2Activity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Main2Activity" />
+            />
+        </activity>
+        <activity
+            android:name=".SpringAnimationdemo"
+            android:label="@string/title_activity_spring_animation"
+            android:parentActivityName=".Animationdemo"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Animationdemo" />
+            />
+        </activity>
+        <activity
+            android:name=".AnimDemoActivity"
+            android:parentActivityName=".Animationdemo"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Animationdemo" />
+            />
+        </activity>
+        <activity android:name=".VectorActivity" />
+        <activity android:name=".FileDownloadActivity" />
+        <activity android:name=".CalenderActivity" />
+        <activity
+            android:name=".FilterimgActivity"
+            android:label="@string/title_activity_filterimg"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DiscreteSeekBar"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Main2Activity" />
+            />
+        </activity>
+        <activity
+            android:name=".UnivImgLoaderActivity"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Main2Activity" />
+            />
+        </activity>
+        <activity android:name=".RetrofitDemoActivity" />
+        <activity android:name=".CircleimageActivity" />
+        <activity android:name=".ActivityStaggered" />
+        <activity android:name=".TagActivity" />
+        <activity android:name=".SpinActivity" />
+        <activity android:name=".DetailActivity" />
+        <activity
+            android:name=".rippleActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FlipviewActivity"
+            android:label="@string/title_activity_flipview"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".CurlviewActivity" />
+        <activity android:name=".customListfbActivity" />
+        <activity android:name=".PopupActivity"></activity>
+    </application>
+
+</manifest>

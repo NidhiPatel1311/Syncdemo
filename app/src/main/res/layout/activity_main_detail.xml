@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar android:id="@+id/toolbar"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginRight="14dp"
+            android:layout_marginBottom="4dp"
+            android:elevation="3dp"
+            card_view:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:id="@+id/relative"
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/holo_orange_light">
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="7dp"
+                    android:paddingLeft="15dp"
+                    android:text="જાગૃતિ મીટીંગ"
+                    android:textColor="@android:color/holo_orange_light"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="7dp"
+                    android:text="(સવભૂમી કેન્દ્ર દ્વારા)"
+                    android:paddingLeft="15dp"
+                    android:textColor="#616161"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/floatingActionButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center"
+                android:layout_marginRight="5dp"
+                android:clickable="true"
+                app:backgroundTint="@android:color/background_light"
+                app:fabSize="mini"
+                card_view:srcCompat="@android:drawable/ic_input_add" />
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginRight="14dp"
+            android:layout_marginBottom="4dp"
+            android:elevation="3dp"
+            card_view:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:id="@+id/relative1"
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/holo_blue_dark">
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="7dp"
+                    android:text="તલાટી/ ઝુંબેશન/ ફિલ્ડ ડે/ સંમેલન"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="7dp"
+                    android:text="(સવભૂમી કેન્દ્ર દ્વારા)"
+                    android:paddingLeft="15dp"
+                    android:textColor="#616161"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/floatingActionButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center"
+                android:layout_marginRight="5dp"
+                android:clickable="true"
+                app:backgroundTint="@android:color/background_light"
+                app:fabSize="mini"
+                card_view:srcCompat="@android:drawable/ic_input_add" />
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_push_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/colorPrimary"
+        android:textSize="26dp" />
+
+    <TextView
+        android:id="@+id/txt_reg_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+
+</RelativeLayout>
+
+</android.support.v7.widget.Toolbar>
